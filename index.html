@@ -2,15 +2,60 @@
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Web App - Simple Interest Calculator</title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="container">
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <div>
+            <div class="innerdiv1">
+                <h1>Simple Interest Calculator</h1>
+                    <div class="innercontainer">
+                        <div>
+                            Amount <input id="amount_input" type="number"  id="principal">  <br/>
+                        </div>
+                        <div sytle="flex-direction: row;">
+                            Interest Rate <input id="rate_input" type="range" step="0.1" min="1" max="20" oninput="onRangeChange()" value="10"> <output id="output"></output> <br/>
+                        </div>
+                        <div>
+                            No. of Years <select id="year_input" name="nyears">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                        </div>
 
-        <button onclick="compute()">Compute</button>
+                        <div id="button_div">
+                            <button onclick="compute()">Compute Interest</button>
+                        </div>
+                    </div>
+
+                <!-- <div class="spandiv" id="spandiv" style="white-space:nowrap; display:flex; text-align:left; margin-left: 15%; margin-top: 2%; flex-direction: column; visibility: hidden;"> -->
+                <div class="spandiv" id="spandiv">
+                    <span>If you deposit </span>
+                    <span id="line1"></span>,<br/>
+                    <span>at an interest rate of </span>
+                    <span id="line2"></span>.<br/>
+                    <span>You will receive an amount of </span>
+                    <span id="line3"></span>,<br/>
+                    <span>in the year </span>
+                    <span id="line4"></span>
+
+                </div>
+            </div>
+        </div>
+                <div>
+                    <p>&#9400 Everyone Can Get Rich</p>
+                </div>
+
+        </div>
+
     </body>
 </html>
